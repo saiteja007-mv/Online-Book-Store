@@ -1,20 +1,197 @@
 <html>
-    <body>
-        
-    </body>
-    <html>
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/53c971cb98.js" crossorigin="anonymous"></script>
+        <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: 'Nunito', sans-serif;
+            }
+            .back{
+                width:100%;
+                height: 100vh;
+                background-image: url("bg.jpg");
+                background-size: cover;
+                background-position: center;
+                position: relative
+            }
+            .navbar{
+                color:azure;
+                width: 85%;
+                height: 15%;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            navbar input[type=text]{
+                float: right;
+                padding: 6px;
+                border: none;
+                margin-top: 8px;
+                margin-right: 16px;
+                font-size: 17px;
+            }
+            .search_box{
+                background: color #643fef;;
+                position: relative;
+                padding: 10px;
+                border-radius: 50px;
+                display: flex;   
+            }
+            .search_box .search_btn {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color:#7a5cf0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                margin-right: 15px;
+                cursor: pointer;
+
+            }
+            .search_box .input_search{
+                outline:none;
+                border: 0;
+                background-color: #7a5cf0;
+                color: #fff;
+                padding: 5px 10px;
+                width: 300px;
+                height: 50px;
+                border-radius: 50px;
+                 
+            }
+            ::placeholder{
+                color: #fff;
+            }
+            ::-webkit-input-placeholder{
+                color: #fff;
+            }
+            span{
+                color: #ffffff;
+            }
+            div[class="navigation"] ul{
+                width: auto;
+                float: right;
+                margin-top: 8px;
+                margin-right: 200px;
+            }
+            
+            div[class="navigation"] li{
+                display: inline-block;
+                padding: 15px 30px;
+            }
+            div[class="navigation"] a{
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                font-size: 2vw;
+            }
+            div[class="navigation"] a:hover{
+                color: #f0c330;
+                transition: 0.5s;
+            }
+            .home{
+                margin-top: 50px;
+                color: black;
+                width: 85%;
+                height: 100%;
+                float: left;
+            }
+            .rightnav{
+                
+                margin-top: 50px;
+                color: white;
+                width:15%;
+                height: 100%;
+                float: left;
+                text-align: center;
+
+            }
+            div[class="rightnav"] a{
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                font-size: 2vw;
+            }
+            div[class="rightnav"] a:hover{
+                color: #f0c330;
+            }
+             
+        </style>
+        <script>
+            $.get('homepage.html')
+            .success(function(data){
+                $('homedisplay').html(data);
+            });
+        </script>
     </head>
-    <frameset rows="20%,10%,70%" border="0px">
-        <frame src="title.html"></frame>
-        <frame src="navbar.html"></frame>
-        <frameset cols="75%,25%" border="0px">
-            <frame src="body.html" name="display_nav"></frame>
-            <frame src="usersofsystem.html"
-        </frameset>
-    </frameset>
     <body>
-        
+        <div class="back">
+            <div class="navbar">
+                <h1>Virtual Learning Envinornment</h1>
+                <div class="search_box">
+                    <div class="search_btn">
+                        <i class="fa-brands fa-searchengin"></i>
+                    </div>
+                    <input type="text" placeholder="Search.." class="input_search">
+                </div>
+            </div>
+            <div class="navigation">
+                <nav>
+                    <ul>
+                        <li><a href="homepage.html" id="homepage">Homepage</a></li>
+                        <li><a href="coursesoffered.html">Coursesoffered</a></li>
+                        <li><a href="coursessyllabus.html">coursessyllabus</a></li>
+                        <li><a href="payments.html">Payments</a></li>
+                        <li><a href="contactus.html">Contactus</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="home" id="homedisplay">
+                <h1>This is body </h1>
+            </div>
+            <div class="rightnav">
+                <h3>Users of System</h3><br><br>
+                  <!--  <ul>
+                        <li><a href="admin.html">Admin</a></li>
+                        <li><a href="student.html">Student</a></li>
+                        <li><a href="professor.html">Professor</a></li>
+                        <li><a href="gotam.html">Gotam</a></li>
+                    </ul>
+                
+                    div[class="rightnav"] ul{
+                width: auto;
+                float: right;
+                margin-top: 8px;
+                margin-right: 50px;
+                list-style-type: none;
+                text-align: center;
+            }
+            div[class=".rightnav"] li{
+                padding: 15px 0px 30px;
+            }
+            div[class="rightnav"] a{
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                font-size: 2vw;
+            }
+                -->
+                <a href="admin.html">Admin</a><br><br>
+                <a href="student.html">Student</a><br><br>
+                <a href="professor.html">Professor</a><br><br>
+                <a href="men.html">Men</a>
+            </div>
+
+        </div>
     </body>
-</html>
-</html>
+</html> 
